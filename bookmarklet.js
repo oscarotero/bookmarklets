@@ -1,5 +1,5 @@
 /*
- * ANS jQuery Bookmarklet launcher (v.1.0)
+ * ANS jQuery Bookmarklet launcher (v.2.0)
  *
  * A navalla suíza (http://idc.anavallasuiza.com/project/bookmarklet/)
  *
@@ -8,8 +8,8 @@
  */
 
 window.bookmarklet = {
-	css: [],
-	js: [],
+	css: {},
+	js: {},
 	jquery: false,
 
 	launch: function (file) {
@@ -17,7 +17,7 @@ window.bookmarklet = {
 			return false;
 		}
 
-		this.loadJS(file, false, function () {
+		this.loadJS(file, function () {
 			var options = window.bookmarklet.options;
 
 			if (typeof(options.css) != 'object') {
@@ -27,6 +27,7 @@ window.bookmarklet = {
 					options.css = [];
 				}
 			}
+
 			if (typeof(options.js) != 'object') {
 				if (options.js) {
 					options.js = [options.js];
@@ -38,7 +39,7 @@ window.bookmarklet = {
 			//Load css
 			if (options.css.length) {
 				for (var i in options.css) {
-					window.bookmarklet.loadCSS(options.css[i], true);
+					window.bookmarklet.loadCSS(options.css[i]);
 				}
 			}
 
@@ -48,29 +49,19 @@ window.bookmarklet = {
 			}
 
 			//Load js
-			if (options.js.length) {
-				window.bookmarklet.loadMultipleJS(options.js, true, window.bookmarklet.ready);
-			} else {
-				window.bookmarklet.ready();
-			}
-			
-			//Remove this element
-			this.parentNode.removeChild(this);
+			window.bookmarklet.loadMultipleJS(options.js, function () {
+				if (options.jquery) {
+					if (!window.bookmarklet.jquery) {
+						window.bookmarklet.jquery = jQuery.noConflict(true);
+					}
+					window.bookmarklet.jquery(options.ready);
+				} else {
+					options.ready();
+				}
+			});
 		});
 	},
-	ready: function () {
-		var options = window.bookmarklet.options;
-
-		if (options.jquery) {
-			if (!window.bookmarklet.jquery) {
-				window.bookmarklet.jquery = jQuery.noConflict(true);
-			}
-			window.bookmarklet.jquery(options.ready);
-		} else {
-			options.ready();
-		}
-	},
-	loadMultipleJS: function (files, register, onload) {
+	loadMultipleJS: function (files, onload) {
 		if (files.length == 0) {
 			if (onload) {
 				onload();
@@ -79,65 +70,79 @@ window.bookmarklet = {
 			return true;
 		}
 
-		this.loadJS(files.shift(), register, function () {
-			window.bookmarklet.loadMultipleJS(files, register, onload);
+		this.loadJS(files.shift(), function () {
+			window.bookmarklet.loadMultipleJS(files, onload);
 		});
 	},
-	loadJS: function (file, register, onload) {
-		if (this.inArray(file, this.js)) {
-			if (onload) {
-				onload();
+	loadJS: function (file, onload) {
+		var element;
+
+		if (element = this.loadedJS(file)) {
+			if (typeof onload == 'function') {
+				onload.call(element);
 			}
-			
+
 			return false;
 		}
-		
-		if (register == true) {
-			this.js.push(file);
-		}
-		
-		var element = document.createElement('script');
+
+		element = document.createElement('script');
 		element.type = 'text/javascript';
 		element.src = file;
+		element.onload = onload;
 		document.body.appendChild(element);
-		
-		if (onload) {
-			element.onload = onload;
-			
+
+		this.js[file] = element;
+
+		if (typeof onload == 'function') {
 			element.onreadystatechange = function () {
 				if (element.readyState == 'loaded' || element.readyState == 'complete') {
-					element.onload();
+					onload.call(element);
 				}
 			}
 		}
+
+		return element;
 	},
-	loadCSS: function (file, register) {
-		if (this.inArray(file, this.css)) {
+	loadCSS: function (file) {
+		if (this.loadedCSS(file)) {
 			return false;
 		}
-		
-		if (register == true) {
-			this.css.push(file);
-		}
-		
+
 		var element = document.createElement('link');
 		element.setAttribute('rel', 'stylesheet');
 		element.setAttribute('type', 'text/css');
 		element.setAttribute('href', file);
 
 		document.getElementsByTagName('head')[0].appendChild(element);
-		
+
+		this.css[file] = element;
+
 		return element;
 	},
-	inArray: function (needle, haystack) {
-		var key = '';
-		
-		for (key in haystack) {
-			if (haystack[key] == needle) {
-				return true;
-			}
+	loadedJS: function (file) {
+		if (this.js[file]) {
+			return this.js[file];
 		}
-		
+
 		return false;
+	},
+	loadedCSS: function (file) {
+		if (this.css[file]) {
+			return this.css[file];
+		}
+
+		return false;
+	},
+	die: function () {
+		for (var i in this.js) {
+			this.js[i].parentNode.removeChild(this.js[i]);
+		}
+		for (var i in this.css) {
+			this.css[i].parentNode.removeChild(this.css[i]);
+		}
+
+		this.js = {};
+		this.css = {};
+		this.jquery = false;
 	}
 };
