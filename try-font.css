@@ -1,0 +1,31 @@
+#try-font {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 200px;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	color: #999;
+	font-family: sans-serif;
+	font-size: 13px;
+	border-radius: 6px;
+}
+#try-font label {
+	margin: 5px 0;
+	display: block;
+	font-weight: bold;
+}
+#try-font select {
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	margin-top: 2px;
+}
+.try-font-hover {
+	outline: dotted 1px red;
+}
+.try-font-selected {
+	outline: solid 1px blue;
+}
