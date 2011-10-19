@@ -9,7 +9,7 @@ window.bookmarklet.options.fonts = [
 		name: "Allan",
 		file: "http://fonts.googleapis.com/css?family=Allan:bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Allerta",
@@ -25,9 +25,12 @@ window.bookmarklet.options.fonts = [
 		}
 	},{
 		name: "Amaranth",
-		file: "http://fonts.googleapis.com/css?family=Amaranth:regular,400italic,700,700italic",
+		file: "http://fonts.googleapis.com/css?family=Amaranth:regular,regularitalic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Angkor",
@@ -45,7 +48,10 @@ window.bookmarklet.options.fonts = [
 		name: "Anonymous Pro",
 		file: "http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Anton",
@@ -63,7 +69,10 @@ window.bookmarklet.options.fonts = [
 		name: "Arimo",
 		file: "http://fonts.googleapis.com/css?family=Arimo:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Artifika",
@@ -75,13 +84,17 @@ window.bookmarklet.options.fonts = [
 		name: "Arvo",
 		file: "http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Astloch",
 		file: "http://fonts.googleapis.com/css?family=Astloch:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Bangers",
@@ -93,7 +106,8 @@ window.bookmarklet.options.fonts = [
 		name: "Battambang",
 		file: "http://fonts.googleapis.com/css?family=Battambang:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Bayon",
@@ -135,19 +149,26 @@ window.bookmarklet.options.fonts = [
 		name: "Buda",
 		file: "http://fonts.googleapis.com/css?family=Buda:300",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"300": ["300", "normal"]
 		}
 	},{
 		name: "Cabin",
 		file: "http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["400", "normal"],
+			"Regular italic": ["400", "italic"],
+			"500": ["500", "normal"],
+			"500 italic": ["500", "italic"],
+			"600": ["600", "normal"],
+			"600 italic": ["600", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Cabin Sketch",
 		file: "http://fonts.googleapis.com/css?family=Cabin+Sketch:bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Calligraffitti",
@@ -165,7 +186,10 @@ window.bookmarklet.options.fonts = [
 		name: "Cantarell",
 		file: "http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Cardo",
@@ -181,9 +205,12 @@ window.bookmarklet.options.fonts = [
 		}
 	},{
 		name: "Caudex",
-		file: "http://fonts.googleapis.com/css?family=Caudex:400,italic,700,700italic",
+		file: "http://fonts.googleapis.com/css?family=Caudex:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Cedarville Cursive",
@@ -213,13 +240,13 @@ window.bookmarklet.options.fonts = [
 		name: "Coda",
 		file: "http://fonts.googleapis.com/css?family=Coda:800",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"800": ["800", "normal"]
 		}
 	},{
 		name: "Coda Caption",
 		file: "http://fonts.googleapis.com/css?family=Coda+Caption:800",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"800": ["800", "normal"]
 		}
 	},{
 		name: "Coming Soon",
@@ -231,7 +258,8 @@ window.bookmarklet.options.fonts = [
 		name: "Content",
 		file: "http://fonts.googleapis.com/css?family=Content:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Copse",
@@ -243,13 +271,16 @@ window.bookmarklet.options.fonts = [
 		name: "Corben",
 		file: "http://fonts.googleapis.com/css?family=Corben:bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Cousine",
 		file: "http://fonts.googleapis.com/css?family=Cousine:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Covered By Your Grace",
@@ -265,9 +296,14 @@ window.bookmarklet.options.fonts = [
 		}
 	},{
 		name: "Crimson Text",
-		file: "http://fonts.googleapis.com/css?family=Crimson+Text:regular,400italic,600,600italic,700,700italic",
+		file: "http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Regular italic": ["normal", "italic"],
+			"600": ["600", "normal"],
+			"600 italic": ["600", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Crushed",
@@ -291,7 +327,8 @@ window.bookmarklet.options.fonts = [
 		name: "Dancing Script",
 		file: "http://fonts.googleapis.com/css?family=Dancing+Script:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Dangrek",
@@ -315,7 +352,8 @@ window.bookmarklet.options.fonts = [
 		name: "Droid Sans",
 		file: "http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Droid Sans Mono",
@@ -327,7 +365,10 @@ window.bookmarklet.options.fonts = [
 		name: "Droid Serif",
 		file: "http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "EB Garamond",
@@ -337,9 +378,16 @@ window.bookmarklet.options.fonts = [
 		}
 	},{
 		name: "Expletus Sans",
-		file: "http://fonts.googleapis.com/css?family=Expletus+Sans:400,400italic,500,500italic,600,600italic,700,700italic",
+		file: "http://fonts.googleapis.com/css?family=Expletus+Sans:regular,regularitalic,500,500italic,600,600italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Regular italic": ["normal", "italic"],
+			"500": ["500", "normal"],
+			"500 italic": ["500", "italic"],
+			"600": ["600", "normal"],
+			"600 italic": ["600", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Fontdiner Swanky",
@@ -369,7 +417,10 @@ window.bookmarklet.options.fonts = [
 		name: "GFS Neohellenic",
 		file: "http://fonts.googleapis.com/css?family=GFS+Neohellenic:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Geo",
@@ -393,7 +444,8 @@ window.bookmarklet.options.fonts = [
 		name: "Hanuman",
 		file: "http://fonts.googleapis.com/css?family=Hanuman:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Holtwood One SC",
@@ -411,7 +463,8 @@ window.bookmarklet.options.fonts = [
 		name: "IM Fell DW Pica",
 		file: "http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "IM Fell DW Pica SC",
@@ -423,7 +476,8 @@ window.bookmarklet.options.fonts = [
 		name: "IM Fell Double Pica",
 		file: "http://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "IM Fell Double Pica SC",
@@ -435,7 +489,8 @@ window.bookmarklet.options.fonts = [
 		name: "IM Fell English",
 		file: "http://fonts.googleapis.com/css?family=IM+Fell+English:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "IM Fell English SC",
@@ -447,7 +502,8 @@ window.bookmarklet.options.fonts = [
 		name: "IM Fell French Canon",
 		file: "http://fonts.googleapis.com/css?family=IM+Fell+French+Canon:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "IM Fell French Canon SC",
@@ -459,7 +515,8 @@ window.bookmarklet.options.fonts = [
 		name: "IM Fell Great Primer",
 		file: "http://fonts.googleapis.com/css?family=IM+Fell+Great+Primer:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "IM Fell Great Primer SC",
@@ -504,19 +561,33 @@ window.bookmarklet.options.fonts = [
 		name: "Josefin Slab",
 		file: "http://fonts.googleapis.com/css?family=Josefin+Slab:100,100italic,300,300italic,400,400italic,600,600italic,700,700italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"100": ["100", "normal"],
+			"100 italic": ["100", "italic"],
+			"Light": ["300", "normal"],
+			"Light italic": ["300", "italic"],
+			"Regular": ["400", "normal"],
+			"Regular italic": ["400", "italic"],
+			"600": ["600", "normal"],
+			"600 italic": ["600", "italic"],
+			"Bold": ["700", "normal"],
+			"Bold italic": ["700", "italic"]
 		}
 	},{
 		name: "Judson",
-		file: "http://fonts.googleapis.com/css?family=Judson:400,400italic,700",
+		file: "http://fonts.googleapis.com/css?family=Judson:regular,regularitalic,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Regular italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Jura",
 		file: "http://fonts.googleapis.com/css?family=Jura:300,400,500,600",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Regular": ["normal", "normal"],
+			"500": ["500", "normal"],
+			"600": ["600", "normal"]
 		}
 	},{
 		name: "Just Another Hand",
@@ -532,9 +603,10 @@ window.bookmarklet.options.fonts = [
 		}
 	},{
 		name: "Kameron",
-		file: "http://fonts.googleapis.com/css?family=Kameron:400,700",
+		file: "http://fonts.googleapis.com/css?family=Kameron:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Kenia",
@@ -564,7 +636,9 @@ window.bookmarklet.options.fonts = [
 		name: "Kreon",
 		file: "http://fonts.googleapis.com/css?family=Kreon:300,400,700",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Regular": ["400", "normal"],
+			"Bold": ["700", "normal"]
 		}
 	},{
 		name: "Kristi",
@@ -582,7 +656,16 @@ window.bookmarklet.options.fonts = [
 		name: "Lato",
 		file: "http://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"100": ["100", "normal"],
+			"100 italic": ["100", "italic"],
+			"Light": ["300", "normal"],
+			"Light italic": ["300", "italic"],
+			"Regular": ["400", "normal"],
+			"Regular italic": ["400", "italic"],
+			"Bold": ["700", "normal"],
+			"Bold italic": ["700", "italic"],
+			"900": ["900", "normal"],
+			"900 italic": ["900", "italic"]
 		}
 	},{
 		name: "League Script",
@@ -594,7 +677,9 @@ window.bookmarklet.options.fonts = [
 		name: "Lekton",
 		file: "http://fonts.googleapis.com/css?family=Lekton:400,italic,700",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Limelight",
@@ -636,7 +721,10 @@ window.bookmarklet.options.fonts = [
 		name: "Maven Pro",
 		file: "http://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"500": ["500", "normal"],
+			"Bold": ["bold", "normal"],
+			"900": ["900", "normal"]
 		}
 	},{
 		name: "Meddon",
@@ -660,7 +748,10 @@ window.bookmarklet.options.fonts = [
 		name: "Merriweather",
 		file: "http://fonts.googleapis.com/css?family=Merriweather:300,regular,700,900",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"],
+			"900": ["900", "normal"]
 		}
 	},{
 		name: "Metal",
@@ -726,7 +817,10 @@ window.bookmarklet.options.fonts = [
 		name: "Muli",
 		file: "http://fonts.googleapis.com/css?family=Muli:300,300italic,400,400italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Light italic": ["300", "italic"],
+			"Regular": ["normal", "normal"],
+			"Regular italic": ["normal", "italic"]
 		}
 	},{
 		name: "Neucha",
@@ -738,7 +832,8 @@ window.bookmarklet.options.fonts = [
 		name: "Neuton",
 		file: "http://fonts.googleapis.com/css?family=Neuton:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Regular italic": ["normal", "italic"]
 		}
 	},{
 		name: "News Cycle",
@@ -750,7 +845,10 @@ window.bookmarklet.options.fonts = [
 		name: "Nobile",
 		file: "http://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Nova Cut",
@@ -804,13 +902,16 @@ window.bookmarklet.options.fonts = [
 		name: "Nunito",
 		file: "http://fonts.googleapis.com/css?family=Nunito:300,400,700",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "OFL Sorts Mill Goudy TT",
 		file: "http://fonts.googleapis.com/css?family=OFL+Sorts+Mill+Goudy+TT:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "Odor Mean Chey",
@@ -822,25 +923,40 @@ window.bookmarklet.options.fonts = [
 		name: "Old Standard TT",
 		file: "http://fonts.googleapis.com/css?family=Old+Standard+TT:regular,italic,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Open Sans",
 		file: "http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Light italic": ["300", "italic"],
+			"Regular": ["400", "normal"],
+			"Regular italic": ["400", "italic"],
+			"600": ["600", "normal"],
+			"600 italic": ["600", "italic"],
+			"Bold": ["700", "normal"],
+			"Bold italic": ["700", "italic"],
+			"800": ["800", "normal"],
+			"800 italic": ["800", "italic"]
 		}
 	},{
 		name: "Open Sans Condensed",
 		file: "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Light italic": ["300", "italic"]
 		}
 	},{
 		name: "Orbitron",
 		file: "http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["400", "normal"],
+			"500": ["500", "normal"],
+			"Bold": ["700", "normal"],
+			"900": ["900", "normal"]
 		}
 	},{
 		name: "Oswald",
@@ -858,31 +974,40 @@ window.bookmarklet.options.fonts = [
 		name: "PT Sans",
 		file: "http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "PT Sans Caption",
 		file: "http://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "PT Sans Narrow",
 		file: "http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "PT Serif",
 		file: "http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "PT Serif Caption",
 		file: "http://fonts.googleapis.com/css?family=PT+Serif+Caption:regular,italic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"]
 		}
 	},{
 		name: "Pacifico",
@@ -912,7 +1037,8 @@ window.bookmarklet.options.fonts = [
 		name: "Play",
 		file: "http://fonts.googleapis.com/css?family=Play:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Playfair Display",
@@ -936,7 +1062,10 @@ window.bookmarklet.options.fonts = [
 		name: "Puritan",
 		file: "http://fonts.googleapis.com/css?family=Puritan:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Quattrocento",
@@ -960,7 +1089,7 @@ window.bookmarklet.options.fonts = [
 		name: "Raleway",
 		file: "http://fonts.googleapis.com/css?family=Raleway:100",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"100": ["100", "normal"]
 		}
 	},{
 		name: "Reenie Beanie",
@@ -1038,7 +1167,7 @@ window.bookmarklet.options.fonts = [
 		name: "Sniglet",
 		file: "http://fonts.googleapis.com/css?family=Sniglet:800",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"800": ["800", "normal"]
 		}
 	},{
 		name: "Special Elite",
@@ -1074,13 +1203,15 @@ window.bookmarklet.options.fonts = [
 		name: "Syncopate",
 		file: "http://fonts.googleapis.com/css?family=Syncopate:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Tangerine",
 		file: "http://fonts.googleapis.com/css?family=Tangerine:regular,bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Taprom",
@@ -1110,13 +1241,23 @@ window.bookmarklet.options.fonts = [
 		name: "Tinos",
 		file: "http://fonts.googleapis.com/css?family=Tinos:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Ubuntu",
 		file: "http://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Light": ["300", "normal"],
+			"Light italic": ["300", "italic"],
+			"Regular": ["400", "normal"],
+			"Regular italic": ["400", "italic"],
+			"500": ["500", "normal"],
+			"500 italic": ["500", "italic"],
+			"Bold": ["700", "normal"],
+			"Bold italic": ["700", "italic"]
 		}
 	},{
 		name: "Ultra",
@@ -1128,7 +1269,7 @@ window.bookmarklet.options.fonts = [
 		name: "UnifrakturCook",
 		file: "http://fonts.googleapis.com/css?family=UnifrakturCook:bold",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "UnifrakturMaguntia",
@@ -1158,7 +1299,10 @@ window.bookmarklet.options.fonts = [
 		name: "Vollkorn",
 		file: "http://fonts.googleapis.com/css?family=Vollkorn:regular,italic,bold,bolditalic",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Regular": ["normal", "normal"],
+			"Italic": ["normal", "italic"],
+			"Bold": ["bold", "normal"],
+			"Bold italic": ["bold", "italic"]
 		}
 	},{
 		name: "Waiting for the Sunrise",
@@ -1188,7 +1332,10 @@ window.bookmarklet.options.fonts = [
 		name: "Yanone Kaffeesatz",
 		file: "http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700",
 		variants: {
-			"Regular": ["normal", "normal"]
+			"Extra light": ["200", "normal"],
+			"Light": ["300", "normal"],
+			"Regular": ["normal", "normal"],
+			"Bold": ["bold", "normal"]
 		}
 	},{
 		name: "Zeyada",

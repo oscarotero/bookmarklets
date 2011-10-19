@@ -1,5 +1,5 @@
 window.bookmarklet.options = {
-	jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js',
+	jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',
 	css: 'try-font.css',
 	js: 'try-font.list.js',
 
@@ -7,19 +7,22 @@ window.bookmarklet.options = {
 		var $selected = $(), $widget, $menu_font, $menu_variant,
 		fonts = window.bookmarklet.options.fonts,
 		helpers = {
-			hoverIn: function (e) {
-				$(e.target).addClass('try-font-hover').parents().removeClass('try-font-hover');
+			onMouseOver: function (e) {
+				$('.try-font-hover').removeClass('try-font-hover');
+				$(e.target).addClass('try-font-hover');
 			},
-			hoverOut: function (e) {
-				$(e.target).removeClass('try-font-hover');
+			onMouseLeave: function (e) {
+				$('.try-font-hover').removeClass('try-font-hover');
 			},
-			hoverClick: function (e) {
+			onClick: function (e) {
 				$selected = $(e.target);
+
+				$('.try-font-hover').removeClass('try-font-hover');
 
 				if ($selected.hasClass('try-font-selected')) {
 					$selected.removeClass('try-font-selected');
-					$menu_font.val('-1').change();
 					$selected = false;
+					$menu_font.val('-1').change();
 
 					return false;
 				}
@@ -28,11 +31,15 @@ window.bookmarklet.options = {
 				$selected = $(e.target).addClass('try-font-selected');
 
 				if ($selected.data('try-font-key') != undefined) {
-					$menu_font.val($selected.data('try-font-key')).change();
+					var keyfont = $selected.data('try-font-key');
+					$menu_font.val(keyfont);
+					helpers.fillVariants(keyfont);
 					$menu_variant.val($selected.data('try-font-variant'));
 				} else {
 					$menu_font.val('-1').change();
 				}
+
+				return false;
 			},
 			fillVariants: function (keyfont) {
 				$menu_variant.empty();
@@ -59,7 +66,7 @@ window.bookmarklet.options = {
 			+ '<button id="try-font-close">Close</button>'
 			+ '</div>';
 
-		$('body').children().hover(helpers.hoverIn, helpers.hoverOut).click(helpers.hoverClick);
+		$('body').children().mouseover(helpers.onMouseOver).mouseleave(helpers.onMouseLeave).click(helpers.onClick);
 
 		$widget = $($widget).appendTo('body');
 		$menu_font = $widget.find('#try-font-family');
@@ -68,15 +75,13 @@ window.bookmarklet.options = {
 		//Close button
 		$widget.find('#try-font-close').click(function () {
 			$('body').children()
-				.unbind('mouseenter', helpers.hoverIn)
-				.unbind('mouseleave', helpers.hoverOut)
-				.unbind('click', helpers.hoverClick);
-			
+				.unbind('mouseover', helpers.onMouseOver)
+				.unbind('mouseleave', helpers.onMouseLeave)
+				.unbind('click', helpers.onClick);
+
 			$widget.remove();
 
 			$('.try-font-hover, .try-font-selected').removeClass('try-font-hover try-font-selected');
-
-			window.bookmarklet.die();
 		});
 
 		//Save font list

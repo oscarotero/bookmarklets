@@ -1,0 +1,20 @@
+body {
+	font-family: Arial, sans-serif;
+	background: #DED;
+}
+
+a {
+	background: #999;
+	color: #000;
+	text-decoration: none;
+	padding: 3px 8px;
+	font-size: 0.9em;
+	font-weight: bold;
+	border-radius: 12px;
+	text-shadow: 1px 1px 0 #CCC;
+}
+a:hover {
+	background: #666;
+	color: #FFF;
+	text-shadow: 1px 1px 0 #000;
+}

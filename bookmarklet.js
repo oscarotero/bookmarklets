@@ -18,7 +18,7 @@ window.bookmarklet = {
 		}
 
 		this.loadJS(file, function () {
-			var options = window.bookmarklet.options;
+			var options = window.bookmarklet.options || {};
 
 			if (typeof(options.css) != 'object') {
 				if (options.css) {

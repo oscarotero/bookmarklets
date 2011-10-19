@@ -9,6 +9,8 @@
 	font-family: sans-serif;
 	font-size: 13px;
 	border-radius: 6px;
+	z-index: 1000;
+	text-align: left;
 }
 #try-font label {
 	margin: 5px 0;
@@ -24,8 +26,8 @@
 	margin-top: 2px;
 }
 .try-font-hover {
-	outline: dotted 1px red;
+	outline: dotted 2px red;
 }
 .try-font-selected {
-	outline: solid 1px blue;
+	outline: solid 2px blue;
 }
