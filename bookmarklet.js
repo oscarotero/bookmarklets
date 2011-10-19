@@ -52,7 +52,7 @@ window.bookmarklet = {
 			window.bookmarklet.loadMultipleJS(options.js, function () {
 				if (options.jquery) {
 					if (!window.bookmarklet.jquery) {
-						window.bookmarklet.jquery = jQuery.noConflict(true);
+						window.bookmarklet.jquery = window.jQuery.noConflict(true);
 					}
 					window.bookmarklet.jquery(options.ready);
 				} else {

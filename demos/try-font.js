@@ -97,7 +97,7 @@ window.bookmarklet.options = {
 			var value = $(this).val();
 			var font = fonts[value];
 
-			if (value == -1) {
+			if (value == -1 && $selected) {
 				$selected.css('font-family', '').removeData('try-font-key');
 			}
 
