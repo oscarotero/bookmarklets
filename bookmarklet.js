@@ -10,7 +10,7 @@
 window.bookmarklet = {
 	css: {},
 	js: {},
-	jquery: false,
+	jQuery: false,
 
 	launch: function (file) {
 		if (!file) {
@@ -51,10 +51,11 @@ window.bookmarklet = {
 			//Load js
 			window.bookmarklet.loadMultipleJS(options.js, function () {
 				if (options.jquery) {
-					if (!window.bookmarklet.jquery) {
-						window.bookmarklet.jquery = window.jQuery.noConflict(true);
+					if (!window.bookmarklet.jQuery) {
+						window.bookmarklet.jQuery = window.jQuery.noConflict(true);
 					}
-					window.bookmarklet.jquery(options.ready);
+
+					window.bookmarklet.jQuery(options.ready);
 				} else {
 					options.ready();
 				}
@@ -75,9 +76,9 @@ window.bookmarklet = {
 		});
 	},
 	loadJS: function (file, onload) {
-		var element;
+		var element = this.loadedJS(file);
 
-		if (element = this.loadedJS(file)) {
+		if (element) {
 			if (typeof onload == 'function') {
 				onload.call(element);
 			}
@@ -88,18 +89,21 @@ window.bookmarklet = {
 		element = document.createElement('script');
 		element.type = 'text/javascript';
 		element.src = file;
-		element.onload = onload;
-		document.body.appendChild(element);
 
-		this.js[file] = element;
-
-		if (typeof onload == 'function') {
+		if (!document.attachEvent) {
+			element.onload = onload;
+		} else if (typeof onload == 'function') {
 			element.onreadystatechange = function () {
-				if (element.readyState == 'loaded' || element.readyState == 'complete') {
+				if (element.readyState == 'complete' || element.readyState == 'loaded') {
 					onload.call(element);
+					element.onreadystatechange = null;
 				}
 			}
 		}
+
+		document.body.appendChild(element);
+
+		this.js[file] = element;
 
 		return element;
 	},
@@ -143,6 +147,6 @@ window.bookmarklet = {
 
 		this.js = {};
 		this.css = {};
-		this.jquery = false;
+		this.jQuery = false;
 	}
 };
