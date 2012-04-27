@@ -28,16 +28,37 @@
 					window.bookmarklet.launch(f);
 				}
 			};
+
+			var launchMin = function (b) {
+				if (window.bookmarklet == undefined || window.bookmarklet.executeMyBookmarklet == undefined) {
+					var s = document.createElement('script');
+					s.type = 'text/javascript';
+					s.src = b;
+
+					if (!document.attachEvent) {
+						s.onload = function () {
+							window.bookmarklet.executeMyBookmarklet();
+						}
+					} else {
+						s.onreadystatechange = function () {
+							if (s.readyState == 'complete' || s.readyState == 'loaded') {
+								window.bookmarklet.executeMyBookmarklet();
+								s.onreadystatechange = null;
+							}
+						}
+					}
+
+					document.body.appendChild(s);
+				} else {
+					window.bookmarklet.executeMyBookmarklet();
+				}
+			};
 		</script>
 	</head>
 
 	<body>
-		<p>
-			<a href="javascript:launch('../bookmarklet.js','refresh-css.js');">Refresh CSS</a>
-		</p>
-
-		<p>
-			<a href="javascript:launch('../bookmarklet.js','try-font.js');">Try font</a>
-		</p>
+		<p><a href="javascript:launch('../bookmarklet.js','refresh-css.js');">Refresh CSS</a></p>
+		<p><a href="javascript:launch('../bookmarklet.js','try-font.js');">Try font</a></p>
+		<p><a href="javascript:launchMin('bookmarklet.js');">Refresh CSS (load 1 file)</a></p>
 	</body>
 </html>

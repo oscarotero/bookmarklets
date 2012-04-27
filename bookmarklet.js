@@ -1,5 +1,5 @@
 /*
- * ANS jQuery Bookmarklet launcher (v.2.0)
+ * ANS jQuery Bookmarklet launcher (v.3.0)
  *
  * A navalla suíza (http://idc.anavallasuiza.com/project/bookmarklet/)
  *
@@ -20,46 +20,49 @@ window.bookmarklet = {
 		this.loadJS(file, function () {
 			var options = window.bookmarklet.options || {};
 
-			if (typeof(options.css) != 'object') {
-				if (options.css) {
-					options.css = [options.css];
-				} else {
-					options.css = [];
-				}
+			window.bookmarklet.execute(options);
+		});
+	},
+	execute: function (options) {
+		if (typeof(options.css) != 'object') {
+			if (options.css) {
+				options.css = [options.css];
+			} else {
+				options.css = [];
 			}
+		}
 
-			if (typeof(options.js) != 'object') {
-				if (options.js) {
-					options.js = [options.js];
-				} else {
-					options.js = [];
-				}
+		if (typeof(options.js) != 'object') {
+			if (options.js) {
+				options.js = [options.js];
+			} else {
+				options.js = [];
 			}
+		}
 
-			//Load css
-			if (options.css.length) {
-				for (var i in options.css) {
-					window.bookmarklet.loadCSS(options.css[i]);
-				}
+		//Load css
+		if (options.css.length) {
+			for (var i in options.css) {
+				window.bookmarklet.loadCSS(options.css[i]);
 			}
+		}
 
-			//Load jQuery
+		//Load jQuery
+		if (options.jquery) {
+			options.js.unshift(options.jquery);
+		}
+
+		//Load js
+		window.bookmarklet.loadMultipleJS(options.js, function () {
 			if (options.jquery) {
-				options.js.unshift(options.jquery);
-			}
-
-			//Load js
-			window.bookmarklet.loadMultipleJS(options.js, function () {
-				if (options.jquery) {
-					if (!window.bookmarklet.jQuery) {
-						window.bookmarklet.jQuery = window.jQuery.noConflict(true);
-					}
-
-					window.bookmarklet.jQuery(options.ready);
-				} else {
-					options.ready();
+				if (!window.bookmarklet.jQuery) {
+					window.bookmarklet.jQuery = window.jQuery.noConflict(true);
 				}
-			});
+
+				window.bookmarklet.jQuery(options.ready);
+			} else {
+				options.ready();
+			}
 		});
 	},
 	loadMultipleJS: function (files, onload) {
