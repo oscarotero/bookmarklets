@@ -1,7 +1,19 @@
-Bookmarklets framework (v.1.0)
+BOOKMARKLETS FRAMEWORK
 
-2011. Created by Oscar Otero (http://oscarotero.com / http://anavallasuiza.com)
+Created by Oscar Otero <http://oscarotero.com> <oom@oscarotero.com>
 
-Bookmarklets is a simple javascript framework focused to create bookmarklets easily.
-Bookmarklets is released under the GNU Affero GPL version 3.
-More information at http://www.gnu.org/licenses/agpl-3.0.html
+Simple javascript framework focused to create bookmarklets easily. You can load css, jquery and other js files.
+
+EXAMPLE:
+
+window.bookmarklet.options = {
+	jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',
+	css: 'http://mysite.com/bookmarklet/styles.css',
+	js: 'http://mysite.com/bookmarklet/javascript.js',
+
+	ready: function ($bookmarklet_jquery_instance) {
+		//Javascript code executed when jquery and js files are loaded.
+	}
+}
+
+GNU Affero GPL version 3. http://www.gnu.org/licenses/agpl-3.0.html

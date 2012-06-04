@@ -155,6 +155,35 @@ window.bookmarklet = {
 };
 
 window.bookmarklet.executeMyBookmarklet = function () {
+    var options = {
+        jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+        ready: function ($) {
+            $("body").css("background","yellow");
+            window.bookmarklet.die();
+        }
+    };
+    window.bookmarklet.execute(options);
+}
+
+/*
+window.bookmarklet.executeMyBookmarklet = function () {
+    var options = {
+        js: [
+        	'http://svn.wikimedia.org/svnroot/mediawiki/trunk/tools/viaf/jquery.cookie.js',
+			'http://svn.wikimedia.org/svnroot/mediawiki/trunk/tools/viaf/jquery.ba-replacetext.js',
+        ],
+        jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
+        ready: function ($) {
+			$("body").replaceText(/a/gi, "*****");
+			console.log($.fn.replaceText);
+			window.bookmarklet.die();
+        }
+    };
+
+	window.bookmarklet.execute(options);
+}
+/*
+window.bookmarklet.executeMyBookmarklet = function () {
 	var options = {
 		ready: function () {
 			var links = document.getElementsByTagName('link');
@@ -179,4 +208,4 @@ window.bookmarklet.executeMyBookmarklet = function () {
 	};
 
 	window.bookmarklet.execute(options);
-}
+}*/
