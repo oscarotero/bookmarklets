@@ -1,5 +1,5 @@
-BOOKMARKLETS FRAMEWORK
-======================
+Bookmarklet Framework
+=====================
 
 Created by Oscar Otero <http://oscarotero.com> <oom@oscarotero.com>
 GNU Affero GPL version 3. http://www.gnu.org/licenses/agpl-3.0.html
@@ -14,12 +14,14 @@ You only have to write a config file with the options for your bookmarklet. The 
 
 #### Example
 
-	window.bookmarklet.options = {
-		jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',
-		css: 'http://mysite.com/bookmarklet/styles.css',
-		js: 'http://mysite.com/bookmarklet/javascript.js',
+```javascript
+window.bookmarklet.options = {
+	jquery: 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',
+	css: 'http://mysite.com/bookmarklet/styles.css',
+	js: 'http://mysite.com/bookmarklet/javascript.js',
 
-		ready: function ($bookmarklet_jquery_instance) {
-			//Javascript code executed when jquery and js files are loaded.
-		}
+	ready: function ($bookmarklet_jquery_instance) {
+		//Javascript code executed when jquery and js files are loaded.
 	}
+}
+```
