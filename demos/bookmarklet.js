@@ -7,6 +7,8 @@
  * as defined here: http://creativecommons.org/licenses/by/3.0/
  */
 
+"use strict";
+
 window.bookmarklet = {
 	css: {},
 	js: {},
@@ -24,7 +26,7 @@ window.bookmarklet = {
 		});
 	},
 	execute: function (options) {
-		if (typeof(options.css) != 'object') {
+		if (typeof(options.css) !== 'object') {
 			if (options.css) {
 				options.css = [options.css];
 			} else {
@@ -32,7 +34,7 @@ window.bookmarklet = {
 			}
 		}
 
-		if (typeof(options.js) != 'object') {
+		if (typeof(options.js) !== 'object') {
 			if (options.js) {
 				options.js = [options.js];
 			} else {
@@ -42,7 +44,9 @@ window.bookmarklet = {
 
 		//Load css
 		if (options.css.length) {
-			for (var i in options.css) {
+			var i;
+
+			for (i in options.css) {
 				window.bookmarklet.loadCSS(options.css[i]);
 			}
 		}
@@ -66,7 +70,7 @@ window.bookmarklet = {
 		});
 	},
 	loadMultipleJS: function (files, onload) {
-		if (files.length == 0) {
+		if (files.length === 0) {
 			if (onload) {
 				onload();
 			}
@@ -82,7 +86,7 @@ window.bookmarklet = {
 		var element = this.loadedJS(file);
 
 		if (element) {
-			if (typeof onload == 'function') {
+			if (typeof onload === 'function') {
 				onload.call(element);
 			}
 
@@ -95,13 +99,13 @@ window.bookmarklet = {
 
 		if (!document.attachEvent) {
 			element.onload = onload;
-		} else if (typeof onload == 'function') {
+		} else if (typeof onload === 'function') {
 			element.onreadystatechange = function () {
-				if (element.readyState == 'complete' || element.readyState == 'loaded') {
+				if (element.readyState === 'complete' || element.readyState === 'loaded') {
 					onload.call(element);
 					element.onreadystatechange = null;
 				}
-			}
+			};
 		}
 
 		document.body.appendChild(element);
@@ -141,10 +145,12 @@ window.bookmarklet = {
 		return false;
 	},
 	die: function () {
-		for (var i in this.js) {
+		var i;
+
+		for (i in this.js) {
 			this.js[i].parentNode.removeChild(this.js[i]);
 		}
-		for (var i in this.css) {
+		for (i in this.css) {
 			this.css[i].parentNode.removeChild(this.css[i]);
 		}
 
