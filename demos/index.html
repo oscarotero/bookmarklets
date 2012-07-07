@@ -5,7 +5,7 @@
 
 		<script type="text/javascript">
 			var launch = function (b, f) {
-				if (window.bookmarklet == undefined || window.bookmarklet.launch == undefined) {
+				if (window.bookmarklet === undefined || window.bookmarklet.launch === undefined) {
 					var s = document.createElement('script');
 					s.type = 'text/javascript';
 					s.src = b;
@@ -16,7 +16,7 @@
 						}
 					} else {
 						s.onreadystatechange = function () {
-							if (s.readyState == 'complete' || s.readyState == 'loaded') {
+							if (s.readyState === 'complete' || s.readyState === 'loaded') {
 								window.bookmarklet.launch(f);
 								s.onreadystatechange = null;
 							}
@@ -30,7 +30,7 @@
 			};
 
 			var launchMin = function (b) {
-				if (window.bookmarklet == undefined || window.bookmarklet.executeMyBookmarklet == undefined) {
+				if (window.bookmarklet === undefined || window.bookmarklet.executeMyBookmarklet === undefined) {
 					var s = document.createElement('script');
 					s.type = 'text/javascript';
 					s.src = b;
@@ -41,7 +41,7 @@
 						}
 					} else {
 						s.onreadystatechange = function () {
-							if (s.readyState == 'complete' || s.readyState == 'loaded') {
+							if (s.readyState === 'complete' || s.readyState === 'loaded') {
 								window.bookmarklet.executeMyBookmarklet();
 								s.onreadystatechange = null;
 							}
@@ -57,8 +57,11 @@
 	</head>
 
 	<body>
-		<p><a href="javascript:launch('../bookmarklet.js','refresh-css.js');">Refresh CSS</a></p>
-		<p><a href="javascript:launch('../bookmarklet.js','try-font.js');">Try font</a></p>
+		<p><a href="javascript:launch('../bookmarklet.min.js','refresh-css.js');">Refresh CSS</a></p>
+		<p><a href="javascript:(function(b,f){if(window.bookmarklet===undefined||window.bookmarklet.launch===undefined){var s=document.createElement('script');s.type='text/javascript';s.src=b;if(!document.attachEvent)s.onload=function(){window.bookmarklet.launch(f)};else s.onreadystatechange=function(){if(s.readyState==='complete'||s.readyState==='loaded'){window.bookmarklet.launch(f);s.onreadystatechange=null}};document.body.appendChild(s)}else window.bookmarklet.launch(f)})('../bookmarklet.js','refresh-css.js');">Refresh CSS (min)</a></p>
+		<p><a href="javascript:launch('../bookmarklet.min.js','try-font.js');">Try font</a></p>
+		<p><a href="javascript:(function(b,f){if(window.bookmarklet===undefined||window.bookmarklet.launch===undefined){var s=document.createElement('script');s.type='text/javascript';s.src=b;if(!document.attachEvent)s.onload=function(){window.bookmarklet.launch(f)};else s.onreadystatechange=function(){if(s.readyState==='complete'||s.readyState==='loaded'){window.bookmarklet.launch(f);s.onreadystatechange=null}};document.body.appendChild(s)}else window.bookmarklet.launch(f)})('../bookmarklet.js','try-font.js');">Try font (min)</a></p>
 		<p><a href="javascript:launchMin('bookmarklet.js');">Refresh CSS (load 1 file)</a></p>
+		<p><a href="javascript:(function(b){if(window.bookmarklet===undefined||window.bookmarklet.executeMyBookmarklet===undefined){var s=document.createElement('script');s.type='text/javascript';s.src=b;if(!document.attachEvent)s.onload=function(){window.bookmarklet.executeMyBookmarklet()};else s.onreadystatechange=function(){if(s.readyState==='complete'||s.readyState==='loaded'){window.bookmarklet.executeMyBookmarklet();s.onreadystatechange=null}};document.body.appendChild(s)}else window.bookmarklet.executeMyBookmarklet()})('bookmarklet.js');">Refresh CSS (load 1 file) (min)</a></p>
 	</body>
 </html>
